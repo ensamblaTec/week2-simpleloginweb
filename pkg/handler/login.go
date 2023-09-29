@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/ensamblaTec/learning/week/problema3/pkg/models"
@@ -20,7 +20,6 @@ func Login(c echo.Context) error {
 	if email == verify.Email && login.Password == verify.Password {
 		login.Logged = true
 	}
-	fmt.Println(login.Email, login.Logged, login.Password)
-	fmt.Println(verify.Email, verify.Logged, verify.Password)
+	log.Println(login.Email, login.Logged, login.Password)
 	return c.Render(http.StatusOK, "completeMsg.html", login)
 }
