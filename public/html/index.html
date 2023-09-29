@@ -1,0 +1,25 @@
+{{template "header"}}
+
+<body>
+    <main class="container row">
+        <div class="login col-4">
+            <form hx-post="/auth/login" hx-target="#completeMsg">
+                <div class="mb-3">
+                    <label for="emailForm" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="emailForm" aria-describedby="emailHelp">
+                    <div id="email" name="email" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="passForm" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passForm" name="pass">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="keepSign">
+                    <label class="form-check-label" for="keepSign">keep me login</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div id="completeMsg"></div>
+    </main>
+{{template "footer"}}

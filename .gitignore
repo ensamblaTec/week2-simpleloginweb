@@ -1,0 +1,7 @@
+# air
+.air.toml
+tmp/
+
+# Golang
+go.mod
+go.sum
